@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSphere | Premium Electronics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- Header & Navbar -->
+    <header class="fixed w-full z-50">
+        <nav class="glass py-3 px-4 md:px-12 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-white neon-text">TECHSPHERE</a>
+                <div class="hidden lg:flex ml-10 space-x-8">
+                    <a href="#" class="text-white hover:text-primary-neon transition-colors">Home</a>
+                    <div class="relative group">
+                        <button class="text-white hover:text-primary-neon transition-colors flex items-center">
+                            Categories <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="glass rounded-lg p-2 mt-2">
+                                <a href="#smartphones" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Smartphones</a>
+                                <a href="#laptops" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Laptops</a>
+                                <a href="#headphones" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Headphones</a>
+                                <a href="#gaming" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Gaming</a>
+                                <a href="#smartwatches" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Smartwatches</a>
+                                <a href="#tablets" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Tablets</a>
+                                <a href="#tv-display" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">TV & Display</a>
+                                <a href="#cameras" class="block px-4 py-2 text-white hover:bg-primary-blue rounded-md">Cameras</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-white hover:text-primary-neon transition-colors">Deals</a>
+                    <a href="#" class="text-white hover:text-primary-neon transition-colors">New Arrivals</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <div class="hidden md:flex items-center bg-gray-800 rounded-full px-4 py-2">
+                    <input type="text" placeholder="Search products..." class="bg-transparent border-none focus:ring-0 text-white w-40 lg:w-64">
+                    <i class="fas fa-search text-primary-neon"></i>
+                </div>
+                
+                <div class="flex space-x-4 md:space-x-6">
+                    <a href="#" class="text-white hover:text-primary-neon transition-colors">
+                        <i class="far fa-heart text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary-neon transition-colors relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-accent-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </a>
+                    <a href="#" class="hidden md:flex items-center text-white hover:text-primary-neon transition-colors">
+                        <i class="fas fa-user-circle text-xl mr-2"></i>
+                        <span>Login</span>
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-button" class="lg:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-primary-dark bg-opacity-95 backdrop-blur-lg lg:hidden">
+            <div class="flex justify-end p-4">
+                <button id="close-menu" class="text-white p-2">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="px-6 py-4">
+                <div class="flex items-center bg-gray-800 rounded-full px-4 py-2 mb-6">
+                    <input type="text" placeholder="Search products..." class="bg-transparent border-none focus:ring-0 text-white w-full">
+                    <i class="fas fa-search text-primary-neon"></i>
+                </div>
+                
+                <div class="space-y-6">
+                    <a href="#" class="block text-white text-xl py-2 hover:text-primary-neon transition-colors">Home</a>
+                    
+                    <div>
+                        <button class="flex items-center justify-between w-full text-white text-xl py-2 hover:text-primary-neon transition-colors">
+                            <span>Categories</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="pl-4 mt-2 space-y-3">
+                            <a href="#smartphones" class="block text-gray-300 hover:text-primary-neon transition-colors">Smartphones</a>
+                            <a href="#laptops" class="block text-gray-300 hover:text-primary-neon transition-colors">Laptops</a>
+                            <a href="#headphones" class="block text-gray-300 hover:text-primary-neon transition-colors">Headphones</a>
+                            <a href="#gaming" class="block text-gray-300 hover:text-primary-neon transition-colors">Gaming</a>
+                            <a href="#smartwatches" class="block text-gray-300 hover:text-primary-neon transition-colors">Smartwatches</a>
+                            <a href="#tablets" class="block text-gray-300 hover:text-primary-neon transition-colors">Tablets</a>
+                            <a href="#tv-display" class="block text-gray-300 hover:text-primary-neon transition-colors">TV & Display</a>
+                            <a href="#cameras" class="block text-gray-300 hover:text-primary-neon transition-colors">Cameras</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="block text-white text-xl py-2 hover:text-primary-neon transition-colors">Deals</a>
+                    <a href="#" class="block text-white text-xl py-2 hover:text-primary-neon transition-colors">New Arrivals</a>
+                    <a href="#" class="flex items-center text-white text-xl py-2 hover:text-primary-neon transition-colors">
+                        <i class="fas fa-user-circle text-xl mr-3"></i>
+                        <span>Login</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="pt-24 pb-12 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">Next Gen <span class="text-primary-neon">Tech</span> Just Landed</h1>
+                <p class="text-base md:text-lg text-gray-300 mb-6 md:mb-8">Experience the future of technology with our premium collection of cutting-edge gadgets and electronics.</p>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                    <button class="bg-primary-blue hover:bg-blue-600 text-white font-semibold py-2 md:py-3 px-6 md:px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 text-sm md:text-base">
+                        Shop Now
+                    </button>
+                    <button class="glass hover:bg-white/10 text-white font-semibold py-2 md:py-3 px-6 md:px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 text-sm md:text-base">
+                        View Details
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative order-1 lg:order-2 mb-8 lg:mb-0">
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1440&q=80" 
+                         alt="Premium Laptop" class="rounded-2xl w-full h-auto tilt-effect">
+                </div>
+                <div class="absolute -inset-2 md:-inset-4 bg-gradient-to-r from-primary-blue to-accent-purple rounded-2xl blur-lg opacity-30 -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center mb-8 md:mb-12">Shop by <span class="text-primary-neon">Category</span></h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6">
+                <!-- Category 1 -->
+                <a href="#smartphones" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-mobile-alt text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Smartphones</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Latest models</p>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="#laptops" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-laptop text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Laptops</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Powerful machines</p>
+                </a>
+                
+                <!-- Category 3 -->
+                <a href="#headphones" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-headphones text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Headphones</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Immersive sound</p>
+                </a>
+                
+                <!-- Category 4 -->
+                <a href="#gaming" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-gamepad text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Gaming</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Next-level gameplay</p>
+                </a>
+                
+                <!-- Category 5 -->
+                <a href="#smartwatches" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-clock text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Smartwatches</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Connected living</p>
+                </a>
+                
+                <!-- Category 6 -->
+                <a href="#tablets" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-tablet-alt text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Tablets</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Portable power</p>
+                </a>
+                
+                <!-- Category 7 -->
+                <a href="#tv-display" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-tv text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">TV & Display</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Stunning visuals</p>
+                </a>
+                
+                <!-- Category 8 -->
+                <a href="#cameras" class="glass card-3d rounded-xl md:rounded-2xl p-4 md:p-6 text-center group cursor-pointer">
+                    <div class="bg-gradient-to-br from-primary-blue to-accent-purple p-3 md:p-4 rounded-full w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-3 md:mb-4 category-icon">
+                        <i class="fas fa-camera text-xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-sm md:text-xl font-semibold text-white group-hover:text-primary-neon transition-colors">Cameras</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2">Capture everything</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smartphones Section -->
+    <section id="smartphones" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Smartphones <span class="text-primary-neon">– Latest Models</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -15%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1611791484670-ce19b801d192?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
+                             alt="Smartphone" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Galaxy X20 Ultra</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(128)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$899</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$999</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -10%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" 
+                             alt="iPhone" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">iPhone 15 Pro</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(98)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,099</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$1,199</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Pixel Phone" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Pixel 8 Pro</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(64)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$899</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -20%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" 
+                             alt="OnePlus Phone" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">OnePlus 11 Pro</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(142)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$799</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$899</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laptops Section -->
+    <section id="laptops" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Laptops <span class="text-primary-neon">– Power & Performance</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
+                             alt="Laptop" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">NovaBook Pro</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(98)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,299</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -12%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80" 
+                             alt="Gaming Laptop" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Quantum Gaming Pro</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(76)</span>
+                    </div>
+                    <div class="mt-4 flex items極力 between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,799</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$1,999</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray極力 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-149618113320極力-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" 
+                             alt="MacBook" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">MacBook Air M2</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas極力-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(112)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,199</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm極力text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -8%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <極力 class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-極力 md:h-48 flex items-center justify-center mb-4 md極力mb-6">
+                        <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8f極力ufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Ultrabook" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">ZenBook Pro 15</h3>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-xs md:text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs md:text-sm ml-2">(54)</span>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,499</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$1,599</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Headphones Section -->
+    <section id="headphones" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Headphones <span class="text-primary-neon">– Immersive Sound</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Sony Headphones" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Sony WH-1000XM5</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Industry-leading noise cancellation with crystal-clear sound for immersive listening.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$349</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -15%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
+                             alt="Bose Headphones" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Bose QuietComfort 45</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Superior comfort and balanced sound, perfect for long listening sessions.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$299</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$349</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1626846116797-2f603e6f5d23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" 
+                             alt="Apple AirPods Max" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Apple AirPods Max</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">High-fidelity audio with seamless integration with Apple devices.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$549</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -10%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1599669454699-248893623464?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Sennheiser Headphones" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Sennheiser HD 560S</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Open-back design providing audiophile-grade sound quality.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$199</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$219</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Section -->
+    <section id="gaming" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Gaming <span class="text-primary-neon">– Next-level Gameplay</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80" 
+                             alt="PlayStation 5" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Sony PlayStation 5</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Next-gen console offering lightning-fast loading and stunning graphics.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$499</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -5%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1621259181231-5ed00655d0f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Xbox Series X" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Xbox Series X</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Powerful gaming console for high-performance gaming experience.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$499</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$525</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Razer Keyboard" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Razer Huntsman Elite</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Mechanical keyboard with ultra-responsive switches.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$199</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -12%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80" 
+                             alt="Logitech Mouse" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Logitech G502 Hero</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">High-precision gaming mouse with customizable buttons.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$79</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$89</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smartwatches Section -->
+    <section id="smartwatches" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Smartwatches <span class="text-primary-neon">– Connected Living</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" 
+                             alt="Apple Watch" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Apple Watch Series 9</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Advanced health tracking and seamless iOS integration.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$399</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -8%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1551816230-ef5deaed4a26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" 
+                             alt="Samsung Watch" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Samsung Galaxy Watch 6</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Stylish design with powerful fitness tracking features.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$349</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$379</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" 
+                             alt="Garmin Watch" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Garmin Venu 2</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Comprehensive fitness tracking with AMOLED display and long battery life.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$299</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -15%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" 
+                             alt="Fitbit Watch" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Fitbit Versa 4</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Affordable smartwatch with focus on fitness and health monitoring.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$229</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$269</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tablets Section -->
+    <section id="tablets" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Tablets <span class="text-primary-neon">– Portable Power</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="iPad Pro" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Apple iPad Pro</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Powerful M1 chip with Liquid Retina display for professionals.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$799</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -10%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1623125016955-4c2e9d03a6cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Samsung Tablet" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Samsung Galaxy Tab S8</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Sleek and powerful tablet for multitasking and entertainment.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$649</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$719</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1597237154674-1a0d2274cef4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Surface Pro" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Microsoft Surface Pro 8</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Versatile 2-in-1 tablet for work and play.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$999</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -18%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
+                             alt="Lenovo Tablet" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Lenovo Tab P11 Pro</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Affordable tablet great for media consumption and productivity.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$499</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$609</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TV & Display Section -->
+    <section id="tv-display" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">TV & Display <span class="text-primary-neon">– Stunning Visuals</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Samsung QLED TV" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Samsung QLED Q80T</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Crisp 4K picture with Quantum Dot technology for vibrant colors.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,199</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -12%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="LG OLED TV" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">LG OLED C1</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Perfect blacks and infinite contrast ratio for true cinematic experience.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,499</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$1,699</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Sony Bravia TV" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Sony Bravia X90J</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Exceptional image processing and smooth motion for sports and movies.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,099</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -20%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="TCL Roku TV" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">TCL 6-Series Roku TV</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Affordable option delivering excellent 4K HDR performance.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$699</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$849</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cameras Section -->
+    <section id="cameras" class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Cameras <span class="text-primary-neon">– Capture Everything</span></h2>
+                <a href="#" class="text-primary-neon hover:text-white flex items-center text-sm md:text-base">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" 
+                             alt="Canon Camera" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Canon EOS R5</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Professional mirrorless camera with 45MP resolution and 8K video capture.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$3,899</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -7%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1505739998589-00fc191ce01d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Sony Camera" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Sony Alpha a7 III</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Full-frame mirrorless camera with exceptional low-light performance.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,999</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$2,149</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1566864222010-d45675442c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" 
+                             alt="Nikon Camera" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">Nikon Z6 II</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Versatile mirrorless camera ideal for photography and video work.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$1,799</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                    <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                        -15%
+                    </div>
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-accent-red">
+                        <i class="far fa-heart text-lg md:text-xl"></i>
+                    </button>
+                    <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                        <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                             alt="GoPro Camera" class="h-32 md:h-40 object-contain">
+                    </div>
+                    <h3 class="text-base md:text-lg font-semibold text-white">GoPro HERO10 Black</h3>
+                    <p class="text-xs md:text-sm text-gray-400 mt-1">Compact action camera perfect for adventure and sports filming.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg md:text-xl font-bold text-white">$499</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">$589</span>
+                        </div>
+                        <button class="bg-primary-blue text-white p-2 md:p-3 rounded-full hover:bg-blue-600 transition-colors text-sm md:text-base">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Special Offers Section -->
+<section id="offers" class="py-12 md:py-16 px-4 md:px-12">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center mb-8 md:mb-12">🔥 Special <span class="text-primary-neon">Offers</span> Just for You</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <!-- Offer 1 -->
+            <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -50%
+                </div>
+                <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Premium Headphones" class="h-32 md:h-40 object-contain">
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-white">Premium Headphones Sale</h3>
+                <p class="text-xs md:text-sm text-gray-400 mt-1">Get up to 50% off on premium headphones from top brands.</p>
+                <div class="mt-4">
+                    <button class="w-full bg-primary-blue hover:bg-blue-600 text-white font-semibold py-2 md:py-3 rounded-full transition-colors text-sm md:text-base">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Offer 2 -->
+            <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -30%
+                </div>
+                <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" 
+                         alt="Gaming Laptops" class="h-32 md:h-40 object-contain">
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-white">Gaming Laptops Deal</h3>
+                <p class="text-xs md:text-sm text-gray-400 mt-1">Powerful gaming laptops with 30% discount this week only.</p>
+                <div class="mt-4">
+                    <button class="w-full bg-primary-blue hover:bg-blue-600 text-white font-semibold py-2 md:py-3 rounded-full transition-colors text-sm md:text-base">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Offer 3 -->
+            <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                    B1G1
+                </div>
+                <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" 
+                         alt="Smartwatches" class="h-32 md:h-40 object-contain">
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-white">Smartwatch Bundle</h3>
+                <p class="text-xs md:text-sm text-gray-400 mt-1">Buy one smartwatch, get another free. Limited time offer!</p>
+                <div class="mt-4">
+                    <button class="w-full bg-primary-blue hover:bg-blue-600 text-white font-semibold py-2 md:py-3 rounded-full transition-colors text-sm md:text-base">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Offer 4 -->
+            <div class="glass product-card rounded-xl md:rounded-2xl p-4 md:p-5 relative overflow-hidden">
+                <div class="absolute top-3 left-3 bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-full">
+                    -25%
+                </div>
+                <div class="h-40 md:h-48 flex items-center justify-center mb-4 md:mb-6">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Tablets" class="h-32 md:h-40 object-contain">
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-white">Tablet Clearance</h3>
+                <p class="text-xs md:text-sm text-gray-400 mt-1">Premium tablets with 25% off. Perfect for work and entertainment.</p>
+                <div class="mt-4">
+                    <button class="w-full bg-primary-blue hover:bg-blue-600 text-white font-semibold py-2 md:py-3 rounded-full transition-colors text-sm md:text-base">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Newsletter Section -->
+    <section class="py-12 md:py-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto glass rounded-xl md:rounded-2xl p-6 md:p-12 text-center">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">Subscribe to Our <span class="text-primary-neon">Newsletter</span></h2>
+            <p class="text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto">Stay updated with the latest tech trends, product launches, and exclusive deals delivered straight to your inbox.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-xl mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-grow bg-gray-800 border border-gray-700 focus:border-primary-neon focus:ring-1 focus:ring-primary-neon rounded-full px-5 md:px-6 py-3 text-white outline-none">
+                <button class="bg-primary-blue hover:bg-blue-600 text-white font-semibold py-3 px-6 md:px-8 rounded-full transition-colors text-sm md:text-base">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark pt-12 pb-6 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white neon-text mb-4 inline-block">TECHSPHERE</a>
+                    <p class="text-gray-400 mb-6">Your one-stop destination for cutting-edge technology and premium electronics.</p>
+                    <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/share/1Du3wf5Foo/" class="text-gray-400 hover:text-primary-neon transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/anurag_vashu95?igsh=MW83YnA3dDFhaDlvZA==" class="text-gray-400 hover:text-primary-neon transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anurag-kumar-694166327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-primary-neon transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                </div>
+                
+               <div>
+                <h3 class="text-xl font-bold text-white mb-4">Shop</h3>
+                <ul class="space-y-2">
+                    <li><a href="#smartphones" class="text-gray-400 hover:text-primary-neon transition-colors">Smartphones</a></li>
+                    <li><a href="#laptops" class="text-gray-400 hover:text-primary-neon transition-colors">Laptops</a></li>
+                    <li><a href="#headphones" class="text-gray-400 hover:text-primary-neon transition-colors">Headphones</a></li>
+                    <li><a href="#gaming" class="text-gray-400 hover:text-primary-neon transition-colors">Gaming</a></li>
+                    <li><a href="#smartwatches" class="text-gray-400 hover:text-primary-neon transition-colors">Smartwatches</a></li>
+                    <li><a href="#tablets" class="text-gray-400 hover:text-primary-neon transition-colors">Tablets</a></li>
+                    <li><a href="#tv-display" class="text-gray-400 hover:text-primary-neon transition-colors">TV & Display</a></li>
+                    <li><a href="#cameras" class="text-gray-400 hover:text-primary-neon transition-colors">Cameras</a></li>
+                </ul>
+            </div>
+            
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 md:mb-6">Customer Service</h3>
+                    <ul class="space-y-2 md:space極力-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary-neon transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-neon transition-colors">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-neon transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-neon transition-colors">Track Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-neon transition-colors">Warranty</a></li>
+                    </ul>
+                </div>
+                
+               <div>
+                <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-primary-neon mt-1 mr-3"></i>
+                        <span class="text-gray-400">Salem , Tamilnadu</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone-alt text-primary-neon mr-3"></i>
+                        <a href="tel:+15551234567" class="text-gray-400 hover:text-primary-neon transition-colors">+91 6204031969</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope text-primary-neon mr-3"></i>
+                        <a href="mailto:support@techsphere.com" class="text-gray-400 hover:text-primary-neon transition-colors">jivashu86@gmail.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-clock text-primary-neon mr-3"></i>
+                        <span class="text-gray-400">Mon-Fri: 9AM - 6PM</span>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-3 md:mb-0">© Anurag vashu. All rights reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary-neon transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-primary-neon transition-colors text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-primary-neon transition-colors text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
